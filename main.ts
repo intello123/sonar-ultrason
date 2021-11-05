@@ -5,5 +5,37 @@ basic.forever(function () {
     DigitalPin.P1,
     PingUnit.Centimeters
     )
-    serial.writeNumber(distance)
+    if (distance >= 15) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+    } else if (distance >= 10) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # . # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (distance >= 5) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (distance >= 0) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
 })
