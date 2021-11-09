@@ -15,21 +15,21 @@ basic.forever(function () {
             `)
     } else if (distance >= 10) {
         basic.showLeds(`
+            . . . . .
             # # # # #
             # # # # #
-            # # . # #
             # # # # #
-            # # # # #
+            . . . . .
             `)
     } else if (distance >= 5) {
         basic.showLeds(`
+            . . . . .
+            . . . . .
             # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
+            . . . . .
+            . . . . .
             `)
-    } else if (distance >= 0) {
+    } else if (distance == 0) {
         basic.showLeds(`
             . . . . .
             . . . . .
